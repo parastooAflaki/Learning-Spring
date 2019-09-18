@@ -4,24 +4,19 @@ import org.springframework.hateoas.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @Controller
 public class FirstController {
 
     private final BeanClassTest beanClassTest;
-    private final PersonRepository personRepository;
-    private final FirstService firstService;
+    private final PersonService firstService;
 
-    public FirstController(BeanClassTest beanClassTest,PersonRepository personRepository,FirstService firstService) {
+    public FirstController(BeanClassTest beanClassTest, PersonServiceImpl personServiceImpl) {
         this.beanClassTest = beanClassTest;
-        this.personRepository = personRepository;
-        this.firstService = firstService;
+        this.firstService = personServiceImpl;
     }
 
     @GetMapping("/hi")
@@ -48,8 +43,7 @@ public class FirstController {
     @PostMapping("/persons")
     @ResponseBody
     public void addPerson(@RequestBody Person p){
-        System.out.println(personRepository.findByName(p.getName()));
-        personRepository.save(p);
+        firstService.addPerson(p);
 
 
     }
