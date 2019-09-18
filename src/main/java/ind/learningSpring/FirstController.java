@@ -15,12 +15,10 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 public class FirstController {
 
     private final BeanClassTest beanClassTest;
-    private final PersonRepository personRepository;
     private final FirstService firstService;
 
-    public FirstController(BeanClassTest beanClassTest,PersonRepository personRepository,FirstService firstService) {
+    public FirstController(BeanClassTest beanClassTest,FirstService firstService) {
         this.beanClassTest = beanClassTest;
-        this.personRepository = personRepository;
         this.firstService = firstService;
     }
 
@@ -48,8 +46,7 @@ public class FirstController {
     @PostMapping("/persons")
     @ResponseBody
     public void addPerson(@RequestBody Person p){
-        System.out.println(personRepository.findByName(p.getName()));
-        personRepository.save(p);
+        firstService.addPerson(p);
 
 
     }

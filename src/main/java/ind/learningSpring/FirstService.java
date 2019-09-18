@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,12 @@ public class FirstService {
 //        return person.orElseThrow(() -> new IllegalArgumentException());
 
         return new Resource<>( person.orElseThrow(()-> new PersonNotFound(id)) , linkTo( methodOn(FirstController.class).getAll()).withRel("all") , linkTo( methodOn( FirstController.class).getOne(id)).withSelfRel() );//roye obj gharar migirad va linke haro mitonam besh ezafe konam
+
+    }
+    public void addPerson(@RequestBody Person p){
+        System.out.println(personRepository.findByName(p.getName()));
+        personRepository.save(p);
+
 
     }
 
