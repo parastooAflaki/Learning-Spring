@@ -1,0 +1,50 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.6.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+sourceCompatibility=1.8
+targetCompatibility=1.8
+
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    mavenCentral()
+}
+bootRun {
+    sourceResources sourceSets.main
+}
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+
+    compile 'com.google.code.gson:gson'
+
+  
+    compile 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+
+    // JPA Data (We are going to use Repositories, Entities, Hibernate)
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    // https://mvnrepository.com/artifact/org.springframework.hateoas/spring-hateoas
+    compile group: 'org.springframework.hateoas', name: 'spring-hateoas', version: '0.25.0.RELEASE'
+    // Use MySQL Connector-J
+
+    compile 'mysql:mysql-connector-java'
+
+    compile 'org.springframework.boot:spring-boot-starter-hateoas'
+
+
+
+
+
+
+}
