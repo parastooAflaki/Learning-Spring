@@ -14,19 +14,20 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @Service
-public class FirstService {
+public class FirstService implements FirstServiceInterface {
 
     @Autowired
     private PersonRepository personRepository;
 
 
-
+    @Override
     public List<Person> getAll(){
         List<Person> persons = new ArrayList<Person>();
         personRepository.findAll().forEach(persons::add);
         return persons;
     }
 
+    @Override
     public Resource<Person> getOne(@PathVariable Long id){
 
         Optional<Person> person= personRepository.findById(id);
@@ -35,6 +36,8 @@ public class FirstService {
         return new Resource<>( person.orElseThrow(()-> new PersonNotFound(id)) , linkTo( methodOn(FirstController.class).getAll()).withRel("all") , linkTo( methodOn( FirstController.class).getOne(id)).withSelfRel() );//roye obj gharar migirad va linke haro mitonam besh ezafe konam
 
     }
+
+    @Override
     public void addPerson(@RequestBody Person p){
         System.out.println(personRepository.findByName(p.getName()));
         personRepository.save(p);
