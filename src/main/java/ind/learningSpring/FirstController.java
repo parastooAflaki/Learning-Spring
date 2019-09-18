@@ -4,22 +4,19 @@ import org.springframework.hateoas.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @Controller
 public class FirstController {
 
     private final BeanClassTest beanClassTest;
-    private final FirstService firstService;
+    private final PersonService firstService;
 
-    public FirstController(BeanClassTest beanClassTest,FirstService firstService) {
+    public FirstController(BeanClassTest beanClassTest, PersonServiceImpl personServiceImpl) {
         this.beanClassTest = beanClassTest;
-        this.firstService = firstService;
+        this.firstService = personServiceImpl;
     }
 
     @GetMapping("/hi")

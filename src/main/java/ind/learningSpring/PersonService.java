@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-public interface FirstServiceInterface {
+public interface PersonService {
 
     public List<Person> getAll();
     public Resource<Person> getOne(@PathVariable Long id);

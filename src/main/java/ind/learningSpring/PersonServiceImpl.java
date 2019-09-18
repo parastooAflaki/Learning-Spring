@@ -14,7 +14,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @Service
-public class FirstService implements FirstServiceInterface {
+public class PersonServiceImpl implements PersonService {
 
     @Autowired
     private PersonRepository personRepository;
