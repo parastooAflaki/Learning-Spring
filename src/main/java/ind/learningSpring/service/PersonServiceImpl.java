@@ -1,5 +1,9 @@
-package ind.learningSpring;
+package ind.learningSpring.service;
 
+import ind.learningSpring.models.Person;
+import ind.learningSpring.PersonNotFound;
+import ind.learningSpring.repository.PersonRepository;
+import ind.learningSpring.controllers.FirstController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Resource;
 import org.springframework.stereotype.Service;

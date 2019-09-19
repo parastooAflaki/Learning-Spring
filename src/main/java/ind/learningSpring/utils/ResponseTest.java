@@ -1,4 +1,4 @@
-package ind.learningSpring;
+package ind.learningSpring.utils;
 
 public class ResponseTest {
     int number;

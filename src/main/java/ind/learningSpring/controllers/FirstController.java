@@ -1,5 +1,10 @@
-package ind.learningSpring;
+package ind.learningSpring.controllers;
 
+import ind.learningSpring.models.Person;
+import ind.learningSpring.service.PersonService;
+import ind.learningSpring.service.PersonServiceImpl;
+import ind.learningSpring.utils.BeanClassTest;
+import ind.learningSpring.utils.ResponseTest;
 import org.springframework.hateoas.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +28,7 @@ public class FirstController {
     @ResponseBody
     public ResponseTest sayHi(){
 
-        return new ResponseTest(beanClassTest.i++ , "salam") /*+ beanClassTest.i++ */ ;
+        return new ResponseTest(beanClassTest.plusI() , "salam") /*+ beanClassTest.i++ */ ;
 
     }
 

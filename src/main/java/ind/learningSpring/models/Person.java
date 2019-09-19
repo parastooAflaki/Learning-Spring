@@ -1,4 +1,4 @@
-package ind.learningSpring;
+package ind.learningSpring.models;
 
 import lombok.Data;
 import lombok.Generated;

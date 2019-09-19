@@ -1,5 +1,6 @@
-package ind.learningSpring;
+package ind.learningSpring.service;
 
+import ind.learningSpring.models.Person;
 import org.springframework.hateoas.Resource;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
