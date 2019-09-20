@@ -11,5 +11,6 @@ public interface PersonRepository extends CrudRepository<Person, Long> {
 
     // select * from person where name = 'name'
     public Optional<Person> findByName(String name);
+    public Person findByUsername(String username);
 
 }

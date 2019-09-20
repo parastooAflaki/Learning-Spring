@@ -1,7 +1,6 @@
 package ind.learningSpring.controllers;
 
-
-import ind.learningSpring.PersonNotFound;
+import ind.learningSpring.exceptions.PersonNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +14,7 @@ import javax.jws.WebResult;
 @ControllerAdvice
 public class ErrorController extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(value = { PersonNotFound.class } )
+    @ExceptionHandler(value = { PersonNotFoundException.class } )
     public ResponseEntity<Object> personNotFound(RuntimeException ex , WebRequest request){
 
         return handleExceptionInternal(

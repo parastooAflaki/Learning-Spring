@@ -14,11 +14,11 @@ public class Person{
 
 
     private String name;
-
+    private String username;
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-
+    private String password;
     private int age;
 
 }
