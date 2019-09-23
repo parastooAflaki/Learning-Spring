@@ -1,6 +1,7 @@
 package ind.learningSpring.controllers;
 
 import ind.learningSpring.exceptions.PersonNotFoundException;
+import ind.learningSpring.exceptions.UserAlreadyExistsException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,20 @@ public class ErrorController extends ResponseEntityExceptionHandler {
 
         );
 
+
+    }
+
+    @ExceptionHandler(value = {UserAlreadyExistsException.class })
+    public ResponseEntity <Object> userAlreadyExist(RuntimeException ex , WebRequest request){
+
+
+        return handleExceptionInternal(
+                ex ,
+                ex.getMessage(),
+                new HttpHeaders(),
+                HttpStatus.CONFLICT,
+                request
+        );
 
     }
 

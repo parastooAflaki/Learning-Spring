@@ -2,28 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8002374-69d0-4c61-be1e-c5eae896bea2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/configuration/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/TokenNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/filters/AuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/filters/RequestLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserDetailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/utils/TokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/utils/TokenUtilImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/SignUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/UserAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/BeanClassTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/ErrorController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/FirstController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/FirstService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/FirstServiceInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/PersonNotFound.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/PersonRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/ResponseTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/controllers/ErrorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/controllers/ErrorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/filters/RequestLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/filters/RequestLogger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/models/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/models/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/repository/PersonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/repository/PersonRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/service/PersonServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ind/learningSpring/service/PersonServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ind/learningSpring/configuration/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/configuration/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/ErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/ErrorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ind/learningSpring/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ind/learningSpring/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/repository/PersonRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ind/learningSpring/service/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ind/learningSpring/service/PersonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -45,31 +40,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/SignUpController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="787">
-              <caret line="52" column="68" selection-start-line="52" selection-start-column="68" selection-end-line="52" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/filters/RequestLogger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+            <state relative-caret-position="165">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserDetailServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="60">
               <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -90,10 +64,80 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/ErrorController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/FirstController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/UserAlreadyExistsException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+              <folding>
+                <element signature="e#148#149#0" expanded="true" />
+                <element signature="e#192#193#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/repository/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/filters/AuthenticationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="75">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,59 +146,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/TokenNotFoundException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/utils/TokenUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/utils/TokenUtilImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="68" column="8" lean-forward="true" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#404#405#0" expanded="true" />
-                <element signature="e#431#432#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/configuration/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            <state relative-caret-position="648">
+              <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1992#1993#0" expanded="true" />
-                <element signature="e#2042#2043#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/9.0.21/70f76ccdee679e557a0787debe05d7ab783d8b55/tomcat-embed-core-9.0.21-sources.jar!/javax/servlet/FilterChain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -182,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/ResponseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/ErrorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/FirstServiceInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/FirstService.java" />
@@ -192,8 +189,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/PersonNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/utils/BeanClassTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/FirstController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/service/PersonServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/ErrorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/filters/RequestLogger.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/models/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/repository/PersonRepository.java" />
@@ -202,9 +197,19 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/utils/TokenUtilImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserDetailServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/configuration/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/filters/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/TokenNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/service/PersonServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/SignUpController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/models/User.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/configuration/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/UserAlreadyExists.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/UserAlreadyExistsException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/ErrorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -261,6 +266,24 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="learningSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learningSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learningSpring" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="learningSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learningSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learningSpring" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="learningSpring" type="462c0819:PsiDirectoryNode" />
               <item name="exceptions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -270,7 +293,23 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="learningSpring" type="462c0819:PsiDirectoryNode" />
-              <item name="filters" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learningSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learningSpring" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="learningSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learningSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learningSpring" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -366,12 +405,15 @@
       <workItem from="1568547442886" duration="4956000" />
       <workItem from="1568714161603" duration="1550000" />
       <workItem from="1568783095586" duration="7428000" />
-      <workItem from="1568999851558" duration="3820000" />
+      <workItem from="1568999851558" duration="4528000" />
+      <workItem from="1569050208885" duration="3170000" />
+      <workItem from="1569180917104" duration="398000" />
+      <workItem from="1569211683242" duration="932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36103000" />
+    <option name="totallyTimeSpent" value="41311000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,7 +428,7 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83625734" visible="true" weight="0.17432208" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83625734" visible="true" weight="0.016602103" />
       <window_info id="Structure" order="1" sideWeight="0.16393442" side_tool="true" weight="0.128943" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -396,15 +438,15 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7194245" visible="true" weight="0.2926566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7194245" visible="true" weight="0.2926566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32937366" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4997233" weight="0.33943966" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4975097" visible="true" weight="0.032397408" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4969563" weight="0.032397408" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50249034" side_tool="true" visible="true" weight="0.032397408" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5030437" side_tool="true" weight="0.032397408" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4997233" weight="0.32937366" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32937366" />
@@ -423,8 +465,8 @@
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83625734" visible="true" weight="0.128943" />
-      <window_info id="Structure" order="1" sideWeight="0.16393442" side_tool="true" visible="true" weight="0.128943" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83625734" visible="true" weight="0.15273935" />
+      <window_info id="Structure" order="1" sideWeight="0.16393442" side_tool="true" weight="0.128943" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -433,19 +475,19 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.71997786" visible="true" weight="0.076673865" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7194245" visible="true" weight="0.2926566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32937366" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4997233" weight="0.33943966" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980631" weight="0.3650108" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4969563" visible="true" weight="0.032397408" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.28002214" side_tool="true" visible="true" weight="0.076673865" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4997233" weight="0.3297414" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5030437" side_tool="true" visible="true" weight="0.032397408" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4997233" weight="0.32937366" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Spring" order="14" sideWeight="0.4997233" weight="0.3297414" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32937366" />
+      <window_info anchor="bottom" id="Spring" order="14" sideWeight="0.4997233" weight="0.32937366" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -526,13 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Throwable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -556,13 +591,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/FirstService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/FirstServiceInterface.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/service/PersonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/utils/ResponseTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -582,35 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/FirstController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/service/PersonServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/ErrorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/PersonNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -618,20 +617,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/repository/PersonRepository.java">
+    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/5.1.2.RELEASE/b1392889ba1fcb39672da9592e056d506efc6ba1/spring-security-core-5.1.2.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="300">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="68" selection-start-line="52" selection-start-column="68" selection-end-line="52" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/models/Person.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/filters/RequestLogger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state relative-caret-position="330">
+          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/utils/TokenUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -645,54 +668,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/TokenNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        <state relative-caret-position="30">
+          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/models/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/filters/RequestLogger.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/repository/PersonRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/utils/TokenUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/service/PersonService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/service/PersonServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="52" column="68" selection-start-line="52" selection-start-column="68" selection-end-line="52" selection-end-column="68" />
+        <state relative-caret-position="675">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/5.1.2.RELEASE/b1392889ba1fcb39672da9592e056d506efc6ba1/spring-security-core-5.1.2.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/models/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        <state relative-caret-position="144">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/utils/TokenUtilImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/SignUpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserDetailServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="60">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/ErrorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/controllers/FirstController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/UserAlreadyExistsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding>
+            <element signature="e#148#149#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/filters/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -701,42 +832,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/configuration/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1992#1993#0" expanded="true" />
-            <element signature="e#2042#2043#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/utils/TokenUtilImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="68" column="8" lean-forward="true" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/filters/AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="648">
+          <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ind/learningSpring/exceptions/TokenNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
         </state>
       </provider>
     </entry>

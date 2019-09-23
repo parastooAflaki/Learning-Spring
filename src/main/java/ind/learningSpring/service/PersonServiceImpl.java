@@ -43,6 +43,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public void addPerson(@RequestBody Person p){
+
         System.out.println(personRepository.findByName(p.getName()));
         personRepository.save(p);
 
