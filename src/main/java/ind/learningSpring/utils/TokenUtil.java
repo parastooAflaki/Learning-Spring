@@ -11,6 +11,6 @@ public interface TokenUtil extends Serializable {
     public Optional<String> getUsernameFromToken(String token);
     public Date getExpirationDateFromToken(String token);
     public String generateToken(UserDetails userDetails);
-    public boolean validateToken(UserDetails userDetails , String token);
+    public Boolean validateToken( String token, UserDetails userDetails) ;
 
 }

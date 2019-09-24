@@ -16,7 +16,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -52,25 +51,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
-                // We don't need CSRF for this example
                 .csrf().disable()
-
                 .authorizeRequests()
-                //don't authenticate this particular request
-                .antMatchers("/authenticate", "/users", "/forgot", "/reset", "/resources/**", "/confirmAccount","/ws/**","/ws","/signUp").permitAll()
-                // all other requests need to be authenticated
+                .antMatchers("/login","/signUp").permitAll()
                 .anyRequest().authenticated()
                 .and()
 
-                /* make sure we use stateless session; session won't be used to store user's state.
-                .exceptionHandling()
-                    .authenticationEntryPoint(authenticationEntryPoint)
-                    .and()
-                */
 
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-        // Add a filter to validate the tokens with every request
         httpSecurity.addFilterBefore(authenticationFilter, UsernamePasswordAuthenticationFilter.class);
     }
 }
