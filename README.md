@@ -1,2 +1,2 @@
 # Learning-Spring
-in the way of learning spring :D
+In the way of learning spring :D
